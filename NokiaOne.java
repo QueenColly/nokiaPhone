@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NokiaOne {
+public class NokiaOneNew {
     public static void main(String[] args) {
 
         Scanner inputCollector = new Scanner(System.in);
@@ -169,7 +169,36 @@ public class NokiaOne {
             }
 
             case "3" -> System.out.println("You entered Chat");
-            case "4" -> System.out.println("You entered Call register");
+                        
+            case "4" -> {
+                System.out.println("You entered Call register");
+
+                String Callregister = """
+
+                 1 -> Missed calls
+                 2 -> Recieved calls
+                 3 -> Dailed numbers
+                 4 -> Erase recent call list
+                 5 -> Show call duration
+                 6 -> Show call costs
+                 7 -> Call cost settings
+                 8 -> Prepaid credit
+                 """;
+                 System.out.print(Callregister);
+                 String callregisterInput = inputCollector.nextLine();
+
+                 switch (callregisterInput){
+                 
+                 case "1" -> System.out.println("Missed calls");
+                 case "2" -> System.out.println("Received calls");
+                 case "3" -> System.out.println("Dailed numbers");
+                 case "4" -> System.out.println("Erase recent call list");
+                 case "5" -> System.out.println("Show call duration");
+                 case "6" -> System.out.println("Show call costs");
+                 case "7" -> System.out.println("Call cost settings");
+                 case "8" -> System.out.println("Prepaid credit");
+}
+}
             case "5" -> System.out.println("You entered Tones");
             case "6" -> System.out.println("You entered Settings");
             case "7" -> System.out.println("You entered Call divert");
